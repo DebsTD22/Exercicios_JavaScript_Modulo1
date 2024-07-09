@@ -1,5 +1,5 @@
 /* 
-    Crie uma função invocando dentro de outra função
+    Invoque uma função dentro de outra função
 */
 
 function escrevaMeuNome(nome){
