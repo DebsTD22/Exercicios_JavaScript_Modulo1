@@ -14,12 +14,28 @@ class Pessoa {
         this.peso = peso;
         this.altura = altura;
     }
-    calcularIMC(peso, altura, nome){
-        const icm = this.peso / (this.altura * this.altura);
-        console.log(`Sou ${this.nome}, e meu ICM é ${icm}`);
+    calcularIMC(){
+        return this.peso / (this.altura * this.altura);
+    }
+    classificarIMC(){
+        const imc = this. calcularIMC(); 
+        if (imc < 18.5) {
+            return (imc, 'abaixo do peso'); 
+        } else if (imc <= 25) {
+            return (imc, 'normal'); 
+        } else if (imc <= 30) {
+            return (imc, 'acima do peso'); 
+        } else if (imc <= 40){
+            return (imc, 'obeso'); 
+        } else if (imc > 40){
+            return (imc, 'obesidade grave');
+        }
     }
 }
 
 const José = new Pessoa('José', 70, 1.75);
+const Pedro = new Pessoa('Pedro', 80, 1.60);
 
-José.calcularIMC();
+console.log(`Sou ${José.nome}, meu ICM é ${José.calcularIMC()}, e estou ${José.classificarIMC()}`);
+
+console.log(`Sou ${Pedro.nome}, meu ICM é ${Pedro.calcularIMC()}, e estou ${Pedro.classificarIMC()}`);
