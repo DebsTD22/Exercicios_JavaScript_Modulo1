@@ -6,3 +6,20 @@
 
     Saída: 98.
 */
+
+const { gets, print} = require('./funcoes_auxiliares');
+
+const numerosSorteados = [];
+
+for (let i = 0; i < 5 ; i++) {
+    const numeroSorteado = gets();
+    numerosSorteados.push(numeroSorteado);
+}
+
+let maiorValor = 0;
+
+for (let i = 0; i < array.length; i++) {
+        
+}
+
+
