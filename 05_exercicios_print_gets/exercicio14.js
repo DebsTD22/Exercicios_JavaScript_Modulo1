@@ -9,9 +9,11 @@
 
 const {gets, print} = require('./funcoes_auxiliares');
 
+const alunos = gets();
+
 let maiorValor = 0;
 
-for (let i = 0; i < 5 ; i++) {
+for (let i = 0; i < alunos ; i++) {
     const numeroSorteado = gets();
     if (numeroSorteado > maiorValor) {
         maiorValor = numeroSorteado
