@@ -7,7 +7,7 @@
     Saída: 98.
 */
 
-const { gets, print} = require('./funcoes_auxiliares');
+const {gets, print} = require('./funcoes_auxiliares');
 
 const numerosSorteados = [];
 
@@ -18,8 +18,11 @@ for (let i = 0; i < 5 ; i++) {
 
 let maiorValor = 0;
 
-for (let i = 0; i < array.length; i++) {
-        
+for (let i = 0; i < numerosSorteados.length; i++) {
+    const numeroSorteado = numerosSorteados[i];
+    if (numeroSorteado > maiorValor) {
+        maiorValor = numeroSorteado
+    }
 }
 
-
+print(maiorValor);
